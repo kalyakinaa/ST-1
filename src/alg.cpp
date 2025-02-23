@@ -4,17 +4,21 @@
 #include "alg.h"
 
 bool checkPrime(uint64_t value) {
-  if (value < 2) { return false; }
+  if (value < 2) {
+    return false;
+  }
   for (uint64_t i = 2; i <= (uint64_t)sqrt(value); i++) {
-    if (value % i == 0) { 
-      return false; 
+    if (value % i == 0) {
+      return false;
     }
   }
   return true;
 }
 
 uint64_t nPrime(uint64_t n) {
-  if (n < 1) { return 0; }
+  if (n < 1) {
+    return 0;
+  }
   uint64_t num;
   for (num = 2; n > 0; num++) {
     if (checkPrime(num)) {

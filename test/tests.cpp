@@ -65,9 +65,9 @@ TEST(nPrimeTests, FourthPrimeIsSeven) {
   EXPECT_EQ(expected, res);
 }
 
-TEST(nPrimeTests, HundredthPrimeIsFourHundredSixtyThree) {
+TEST(nPrimeTests, HundredthPrimeIsFiveHundredFortyOne) {
   uint64_t res = nPrime(100);
-  uint64_t expected = 463;
+  uint64_t expected = 541;
   EXPECT_EQ(expected, res);
 }
 
