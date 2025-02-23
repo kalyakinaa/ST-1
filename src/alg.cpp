@@ -1,12 +1,14 @@
 // Copyright 2025 UNN-CS
 #include <cstdint>
-#include <vector>
+#include <cmath>
 #include "alg.h"
 
 bool checkPrime(uint64_t value) {
   if (value < 2) { return false; }
   for (uint64_t i = 2; i <= (uint64_t)sqrt(value); i++) {
-    if (value % i == 0) { return false; }
+    if (value % i == 0) { 
+      return false; 
+    }
   }
   return true;
 }
@@ -27,7 +29,10 @@ uint64_t nextPrime(uint64_t value) {
   if (value < 1) {
     value = 1;
   }
-  for (value += 1; !checkPrime(value); value++);
+  value++;
+  while (!checkPrime(value)) {
+    value++;
+  }
   return value;
 }
 
