@@ -7,7 +7,7 @@ bool checkPrime(uint64_t value) {
   if (value < 2) {
     return false;
   }
-  for (uint64_t i = 2; i <= (uint64_t)sqrt(value); i++) {
+  for (uint64_t i = 2; i <= static_cast<uint64_t>(sqrt(value)); i++) {
     if (value % i == 0) {
       return false;
     }
